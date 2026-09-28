@@ -1,23 +1,67 @@
 aid: better-meat
+
 name: Better Meat
-description: 'Better Meat is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://static1.squarespace.com/static/6883c85106f2737232592a9d/t/6a458a0a02b4a53962d93976/1782942218222/bmc_ingredients_logo_blue_orange.png?format=1500w
+
+description: 'Better Meat, operating under the brand BMC Ingredients, develops high‑protein mycelium‑based ingredients to create sustainable, animal‑free food products. The company focuses on biotechnology and food‑tech innovations that reduce environmental impact while delivering nutritious alternatives to traditional meat.'
+
 url: https://raw.githubusercontent.com/api-evangelist/better-meat/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- FoodTech
+- Biotechnology
+- SustainableFood
+- Mycelium
+- AlternativeProtein
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/better-meat-hosts.yml
+- type: Vendors
+  url: vendors/better-meat-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.bmcingredients.com/privacy-policy
+- type: Newsroom
+  url: https://www.bmcingredients.com/news
+- type: DomainSecurity
+  url: security/better-meat-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bmcingredients.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: OpenAPI spec endpoints (e.g., https://api.bmcingredients.com/openapi.json) returned no content.
+  evidence:
+    - url: https://api.bmcingredients.com/openapi.json
+      status: 0
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
